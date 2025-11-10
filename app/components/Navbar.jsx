@@ -8,7 +8,7 @@ import { PiShoppingCartLight } from "react-icons/pi";
 const Navbar = () => {
   return (
     <>
-      <nav className="py-15 absolute top-0 left-0 w-full z-50 bg-red-400 hidden lg:block">
+      <nav className="py-15 absolute top-0 left-0 w-full z-50 hidden lg:block">
         <div className="main container flex items-center justify-between">
           {/* --------logo------- */}
           <div className="logo flex gap-3 items-center">
@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center gap-15">
             {menuitem.map((item, id) => (
               <Link
-                className="text-base text-white font-medium font-inter"
+                className="text-base text-white hover:text-green-400 font-medium font-inter"
                 key={id}
                 href={item.navLink}
               >
@@ -33,8 +33,8 @@ const Navbar = () => {
 
           {/* --------Icons---- */}
           <div className="text-2xl text-white flex items-center gap-15">
-            <IoSearchOutline className="cursor-pointer" />
-            <PiShoppingCartLight className="cursor-pointer" />
+            <IoSearchOutline className="cursor-pointer hover:text-green-400" />
+            <PiShoppingCartLight className="cursor-pointer hover:text-green-400" />
           </div>
         </div>
       </nav>
